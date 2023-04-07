@@ -1,0 +1,9 @@
+setup.py
+reauto.egg-info/PKG-INFO
+reauto.egg-info/SOURCES.txt
+reauto.egg-info/dependency_links.txt
+reauto.egg-info/entry_points.txt
+reauto.egg-info/requires.txt
+reauto.egg-info/top_level.txt
+reqauto/__init__.py
+reqauto/main.py

@@ -1,13 +1,23 @@
 from setuptools import setup, find_packages
+from setuptools.command.install import install
 import os
+
+class PostInstallCommand(install):
+    def run(self):
+        install.run(self)
+        os.system('python3 post_install.py')
 
 # Read the contents of your README file
 with open("docs/README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="reauto",
-    version="0.1.1",
+    cmdclass={'install': PostInstallCommand},
+)
+
+setup(
+    name="reqauto",
+    version="0.1.3",
     author="Jaseunda",
     author_email="opensource@jaseunda.com",
     description="A Python package to automatically generate and install requirements.txt",

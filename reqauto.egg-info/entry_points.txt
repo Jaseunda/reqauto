@@ -1,2 +1,2 @@
 [console_scripts]
-autoreq = autoreq:main
+piply = piply:main
